@@ -1,0 +1,91 @@
+/* Start Global Rules  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* End Global Rules  */
+
+/* Start Parent  */
+.parent {
+    display: grid;
+    width: 800px;
+    height: 95vh;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: minmax (100px 200px) repeat(3 , auto);
+    gap: 10px;
+    margin: 10px auto;
+    justify-content: center;
+    align-content: space-between;
+    grid-template-areas: 
+    "header header header header header header header header "
+    "container container container container container container container container"
+    "contact contact contact contact contact contact contact contact ";
+}
+/* End Parent  */
+/* Start Header  */
+
+.parent header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: flex-end;
+    grid-area: header;
+}
+ img {
+    width: 60px;
+    height: 60px;
+}
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* End Header  */
+
+/* Start Container  */
+.parent .container {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-area: container;
+    height: 65vh;
+    justify-content: center;  
+}
+.main-heading {
+    font-size: 40px;
+    display: flex;
+    color: #aaa;
+    font-weight: bold;
+    justify-content: center;
+}
+.container p {
+    display: flex;
+    font-size: 25px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Contact Section  */
+.parent .contact {
+    display: grid;
+    justify-content: center;
+    grid-area: contact;
+}
+.contact .links {
+    display: flex;
+    justify-content: space-around;
+}
+.parent .contact .linkedin {
+    width: 30px;
+    height: 30px;
+}
+.parent .contact .email {
+    width: 30px;
+    height: 30px;
+}
+/* End Container  */
