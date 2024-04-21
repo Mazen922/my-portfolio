@@ -13,6 +13,8 @@ body {
   --background-color: #232323;
   --Desktop-width: 900px;
   --Mobile-width: 300px;
+  transition: all 0.5s;
+  scroll-behavior: smooth;
 }
 /* End Global Rules  */
 
